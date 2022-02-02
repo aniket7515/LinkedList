@@ -40,6 +40,20 @@ public class SinglyLinkedList {
         head=newNode;
 
     }
+     // Insert a Node at last of singly Linked list
+
+    public void insertLast(int value){
+        ListNode newNode = new ListNode(value);
+        if(head==null){
+            head=newNode;
+            return;
+        }
+        ListNode current=head;
+        while(current.next!=null){
+            current=current.next;
+        }
+        current.next=newNode;
+    }
 
     public static void main(String[] args) {
         SinglyLinkedList ssl=new SinglyLinkedList();
@@ -59,6 +73,8 @@ public class SinglyLinkedList {
         ssl.length();
         ssl.insertFirst(23);
         ssl.length();
+        ssl.display();
+        ssl.insertLast(33);
         ssl.display();
 
 

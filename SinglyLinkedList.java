@@ -54,6 +54,29 @@ public class SinglyLinkedList {
         }
         current.next=newNode;
     }
+    
+    
+    // Insert at given position
+
+    public void insert(int position, int value){
+        ListNode node=new ListNode(value);
+
+        if(position==1){
+            node.next=head;
+            head=node;
+        }else{
+            ListNode previous=head;
+            int count=1;
+
+            while(count<position-1){
+                previous=previous.next;
+                count++;
+            }
+            ListNode current=previous.next;
+            previous.next=node;
+            node.next=current;
+        }
+    }
 
     public static void main(String[] args) {
         SinglyLinkedList ssl=new SinglyLinkedList();
@@ -76,6 +99,11 @@ public class SinglyLinkedList {
         ssl.display();
         ssl.insertLast(33);
         ssl.display();
+        
+        
+        ssl.insert(2,31);
+        ssl.display();
+
 
 
     }

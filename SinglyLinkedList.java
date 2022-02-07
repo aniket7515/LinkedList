@@ -77,6 +77,17 @@ public class SinglyLinkedList {
             node.next=current;
         }
     }
+    
+    // Delete First Node
+    public ListNode delteFirst(){
+        if(head==null){
+            return null;
+        }
+        ListNode temp= head;
+        head=head.next;
+        temp.next=null;
+        return temp;
+    }
 
     public static void main(String[] args) {
         SinglyLinkedList ssl=new SinglyLinkedList();
@@ -102,6 +113,10 @@ public class SinglyLinkedList {
         
         
         ssl.insert(2,31);
+        ssl.display();
+        
+         System.out.println("After removing first");
+        System.out.println(ssl.delteFirst().data);
         ssl.display();
 
 

@@ -128,6 +128,17 @@ public class SinglyLinkedList {
 
 
     }
+    
+    // Search an Element in a Singly Linkedlist
+    public boolean searchElement(int searchKey){
+        ListNode current=head;
+        while(current!=null){
+            if(current.data==searchKey){
+                return true;
+            }
+            current=current.next;
+        }return false;
+    }
 
     public static void main(String[] args) {
         SinglyLinkedList ssl=new SinglyLinkedList();
@@ -170,6 +181,12 @@ public class SinglyLinkedList {
         ssl.display();
         ssl.DeleteAtPosition(2);
         ssl.display();
+        
+        
+        // search an elemet in a singly linked list
+        System.out.println("Searching a element in singly linked list");
+        System.out.println( ssl.searchElement(29));
+
 
 
 

@@ -106,6 +106,28 @@ public class SinglyLinkedList {
         return current;
 
     }
+    
+    // Delete a Node from a given position from a Singly Linked list
+    public ListNode DeleteAtPosition(int position){
+        if(position==1){
+            head=head.next;
+        }
+
+            ListNode previous=head;
+            int count=1;
+            while(count < position-1){
+                previous=previous.next;
+                count++;
+            }
+            ListNode current=previous.next;
+            previous.next=current.next;
+
+            return current;
+
+
+
+
+    }
 
     public static void main(String[] args) {
         SinglyLinkedList ssl=new SinglyLinkedList();
@@ -140,6 +162,15 @@ public class SinglyLinkedList {
         System.out.println("After Removing last Node");
         ssl.deleteLast();
         ssl.display();
+        
+         // Delete Node at a given position
+        System.out.println("Deleteing a Node at a given position");
+        ssl.insertFirst(53);
+        ssl.insertFirst(29);
+        ssl.display();
+        ssl.DeleteAtPosition(2);
+        ssl.display();
+
 
 
 

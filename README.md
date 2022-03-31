@@ -10,3 +10,5 @@ contains all insertion , deletion at first , last and at a given index
 -Kth element from java
 </br>
 -Merge two sorted Linked List
+</br>
+-Add Last

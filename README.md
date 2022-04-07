@@ -12,3 +12,5 @@ contains all insertion , deletion at first , last and at a given index
 -Merge two sorted Linked List
 </br>
 -Add Last
+</br>
+-Middle

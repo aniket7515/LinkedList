@@ -14,3 +14,5 @@ contains all insertion , deletion at first , last and at a given index
 -Add Last
 </br>
 -Middle
+</br>
+-Odd Even
